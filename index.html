@@ -3,7 +3,7 @@
   <head>
     <title>Drive API Quickstart</title>
     <meta charset="utf-8" />
-    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'unsafe-inline'; script-src-elem 'self' https://apis.google.com https://accounts.google.com; script-src 'unsafe-inline' 'unsafe-eval' https://apis.google.com https://accounts.google.com chrome-extension://jocdafjpenokkceebkgacbmkeooebldj ">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://apis.google.com https://accounts.google.com/gsi/client; ">
   </head>
   <body>
     <p>Drive API Quickstart</p>
@@ -14,8 +14,10 @@
 
     <pre id="content" style="white-space: pre-wrap;"></pre>
 
+    <script async defer src="google-js-api.js" id="gapiButton"></script>
+    <script async defer src="gsi-client.js" id="gisButton"></script>
+    <!-- <script async defer src="https://apis.google.com/js/api.js" id="gapiButton"></script>
+    <script async defer src="https://accounts.google.com/gsi/client" id="gisButton"></script> -->
     <script src="core-drive-connection.js"></script>
-    <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
-    <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
   </body>
 </html>
